@@ -10,25 +10,27 @@ A Multi-LiDAR Dataset on Extreme Mapping Scenarios
 
 # Evaluation tutorial
 ## SLAM adaption
-### LO: floam, intensity slam, slamesh, hdl_graph_slam(optional)
-
-### LIO: liosam, fastlio, hdl_graph_slam(optional)
-
-### VO(optional): orbslam
-
+### LO: floam, intensity slam, slamesh
+### LIO: liosam, fastlio
 ### VIO(optional): orbslam3, vins
 
-## Localization evaluation: 
+## Localization evaluation (RMSE of ATE): 
+### record pose in tum format
+https://github.com/RuanJY/evaluater
 ### evo
 https://github.com/MichaelGrupp/evo
+### rpg
+https://github.com/uzh-rpg/rpg_trajectory_evaluation
+### traj_plot from FusionPortale
+https://github.com/fusionportable/fusionportable_dataset_tools/tree/main/tools/traj_plot
+### self-defined method based on bus routes
+need to be developed
 
 ## Mapping evaluation: 
-### from fusionportable_dataset_tools
+### map quality from fusionportable_dataset_tools (RMSE of RE, COM, CD, with ground truth)
 https://github.com/fusionportable/fusionportable_dataset_tools/tree/main/evaluation/map_evaluation
 
-### Pointcloud Evaluation Tool
+### map entropy from Pointcloud Evaluation Tool (without ground truth)
 https://github.com/AIS-Bonn/pointcloud_evaluation_tool
-
-### CloudCompare Rendering
 
 # Acknowledgement
