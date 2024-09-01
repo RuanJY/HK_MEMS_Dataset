@@ -2,7 +2,8 @@
 HK-MEMS, a MEMS LiDAR dataset on urban tunnels and dynamic scenarios
 
 # Updates
-- 1/9/2024, this repo is opened. Sample data are provided. The full dataset will be released after revision according to the review feedback.
+- 1/9/2024, this repo is opened. Sample data will be provided soon. The full dataset will be released after revision according to the review feedback.
+
 # Introduction
 This paper presents a multimodular dataset, HK-MEMS, incorporating data from MEMS LiDARs, a camera, GNSS, and Inertial Navigation Systems. To our best knowledge, it is the first dataset to offer **automotive-grade MEMS LiDAR** data on urban roads for research in Simultaneous Localization and Mapping (SLAM).
 
@@ -23,6 +24,7 @@ The sensor suite in our dataset:
 - A Xsens MTI-30 IMU
 - A CUAV V5+ flight controller (used as INS system) with RTK-GPS
 - An Intel NUC mini computer.
+
 <p align="center">
   <img src="document/figure/sensor_suite.png" alt="sensor_suite.png" width="50%">
 </p>
@@ -34,7 +36,7 @@ The sensor suite in our dataset:
 
 - Handheld platform
 - Mobile robot
-- buses
+- Buses
 
 <p align="center">
   <img src="document/figure/mobile_robot_and_bus.png" alt="mobile_robot_and_bus.png" width="70%">
@@ -118,8 +120,8 @@ The reference bus routes path and the sensor data used in SLAM are collected in 
 We align the two paths first and then compute a metric called Relative Root mean Square Error (RRMSE).
 
 - The Dyna-vehicle group shows the lowest errors.
-- The MK1-3 sequences also presents significant challenges.
-- The tunnel group exhibits the highest error.
+- The MK1-3 sequences presents significant challenges.
+- The Tunnel group exhibits the highest error.
 
 <p align="center">
   <img src="document/figure/rrmse_result.png" alt="rrmse_result.png" width="80%">
