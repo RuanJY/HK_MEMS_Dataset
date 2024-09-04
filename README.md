@@ -2,7 +2,7 @@
 HK-MEMS, a MEMS LiDAR dataset on urban tunnels and dynamic scenarios
 
 # Updates
-- 1/9/2024, this repo is opened. Sample data will be provided soon. The full dataset will be released after revision according to the review feedback.
+- 1/9/2024, this repo is opened. Sample data is provided. ([Sample_data_download](https://1drv.ms/f/s!AoYF4x3O8uR9g6xkP0XRGdjlE7QinQ?e=Lsf5gY), password: HK_MEMS_Dataset). The full dataset will be released after revision according to the review feedback.
 
 # Introduction
 This paper presents a multimodular dataset, HK-MEMS, incorporating data from MEMS LiDARs, a camera, GNSS, and Inertial Navigation Systems. To our best knowledge, it is the first dataset to offer **automotive-grade MEMS LiDAR** data on urban roads for research in Simultaneous Localization and Mapping (SLAM).
