@@ -12,6 +12,8 @@ This dataset emphasizes **extreme environments** like degenerate urban **tunnels
 We collect 187 minutes and 75.4 kilometers of data. State-of-the-art SLAM methods are evaluated on this benchmark. The result highlights the challenges in extreme environments and underscores the ongoing need to enhance **the robustness of SLAM systems**.
 This dataset serves as a valuable platform for exploring the potential and limitations of MEMS LiDAR, and a challenge to enhance the robustness of SLAM in urban navigation scenarios.
 
+**Introduction video**:
+
 <div align=center>
 <a href="https://youtu.be/skkPn5g-ow4" target="_blank"><img src="document/figure/cover-small.png" alt="video1" width="85%" /></a>
 </div>
