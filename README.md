@@ -5,7 +5,7 @@ HK-MEMS, a MEMS LiDAR dataset on urban tunnels and dynamic scenarios
 
 - 12 May 2025, all **data** are avaliable at ([Data_download](https://1drv.ms/f/c/7de4f2ce1de30586/EoYF4x3O8uQggH1g1gAAAAABHtm7xdSWAF3Q12S6Wyertg?e=MB0NVu), password: HK_MEMS_Dataset)  
 
-- 06 Mar 2025, Introduction **video** are available at： [video1](https://youtu.be/skkPn5g-ow4) or [video2](https://www.bilibili.com/video/BV1fUX9YWEZW/?vd_source=a7075e8cce0b5d3273610c2b2539377d)
+- 06 Mar 2025, Introduction **video** are available at： [youtube](https://youtu.be/skkPn5g-ow4) or [bilibili](https://www.bilibili.com/video/BV1fUX9YWEZW/?vd_source=a7075e8cce0b5d3273610c2b2539377d)
 
 - 01 Sep 2024, this repo is opened. Sample **data** is provided. ([Sample_data_download](https://1drv.ms/f/s!AoYF4x3O8uR9g6xkP0XRGdjlE7QinQ?e=Lsf5gY), password: HK_MEMS_Dataset). The full dataset will be released after revision according to the review feedback.
 
