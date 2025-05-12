@@ -37,7 +37,7 @@ The sensor suite in our dataset:
 - A 32-beam Ouster OS1-32 mechanical LiDAR
 - A RealSense L515 LiDAR (used as a camera in outdoor environments)
 - A Xsens MTI-30 IMU
-- A CUAV V5+ flight controller (used as INS system) with RTK-GPS
+- A CUAV V5+ flight controller (used as an INS system) with RTK-GPS
 - An Intel NUC mini computer.
 
 <p align="center">
@@ -60,7 +60,7 @@ The sensor suite in our dataset:
 # Scenarios
 
 This dataset concentrates on the typical and challenging scenarios in urban mapping and localization.
-It can serves as a benchmark platform for investigating issues such as **degenerate structure, high-speed motion, dynamic noise, and altitude drift**.
+It can serve as a benchmark platform for investigating issues such as **degenerate structure, high-speed motion, dynamic noise, and altitude drift**.
 
 
 <p align="center">
@@ -78,7 +78,7 @@ Main features and challenges of 26 sequences and three groups:
 - HH2 and HH3: degenerate subway passages or footpaths, mobile robot, moderate.
 - MK1-3: many dynamic objects that are very close to the sensors, handheld, challenging; 
 ## Dyna-vehicle group
-6 sequences gathered on urban roads, the platform are buses.
+6 sequences gathered on urban roads, the platform is bus.
 - Low-speed sequences (CB1, CD1, NP1, TST1) in commercial areas, easy;
 - High-speed sequences in suburban locales (PFL1) and cargo terminals (TY1), moderate.
 
@@ -88,33 +88,35 @@ Images from the Dyna-pedestrian and Dyna-vehicle groups:
 </p>
 
 ## Tunnel group
-14 sequences recorded within 5 tunnels located beneath the sea or mountains. Multiple recordings for each tunnel are provided, showcasing varying times, weather conditions, traffic volumes, and directions. Challenging.
+14 sequences were recorded within 5 tunnels located beneath the sea or mountains. Multiple recordings for each tunnel are provided, showcasing varying times, weather conditions, traffic volumes, and directions. Challenging.
 
 Images from the Tunnel group :
 <p align="center">
   <img src="document/figure/tunnel_seq_image4.png" alt="tunnel_seq_image4.png" width="100%">
 </p>
 
-# Groud Truth
-- **RTK-**. provides precise 3D position measurements with centimeter-level accuracy.
+# Ground Truth
+- **RTK-**.
+-  provides precise 3D position measurements with centimeter-level accuracy.
   (HH1, HH2)
 <p align="center">
   <img src="document/figure/gps-slam-path.png" alt="gps-slam-path.png" width="50%">
 </p>
 
-- **Bus Route data**. In sub-terrain tunnels or urban canyons with poor GPS signal, reliable trajectory references can be derived from the bus route data from the government.
+- **Bus Route data**.
+-  In sub-terrain tunnels or urban canyons with a poor GPS signal, reliable trajectory references can be derived from the bus route data from the government.
   (Dyna-vehicle group and Tunnel group)
 <p align="center">
   <img src="document/figure/ground_truth_bus_routes.png" alt="ground_truth_bus_routes.png" width="50%">
 </p>
 
 - **Altitude**
-altitude references are established through smoothed air pressure readings from the barometer integrated within the CUAV V5+ INS system.
+Altitude references are established through smoothed air pressure readings from the barometer integrated within the CUAV V5+ INS system.
 <p align="center">
   <img src="document/figure/ground_altitude.png" alt="ground_altitude.png" width="50%">
 </p>
 
-- If GPS and bus route data are unavailable, the start to end drift is used for evaluation (HH3, MK1-3).
+- If GPS and bus route data are unavailable, the start-to-end drift is used for evaluation (HH3, MK1-3).
 
 # Evaluation
 
@@ -123,19 +125,19 @@ We adapted and tested several SLAM methods to the MEMS LiDAR in this dataset, in
 - F-LOAM: LO, point-based, need to modify the feature extraction 
 - SLAMesh: LO, model-based, no modification needed.
 - FAST-LIO2: LIO system, filter-based, no feature extraction needed.
-- LIO-SAM: LIO system, factor-graph-based, need to modify the feature extraction.
+- LIO-SAM: LIO system, factor-graph-based, needs to modify the feature extraction.
   
 In LIO systems, notice that the timestamp of each frame of the point cloud in M1 LiDAR is the time when the last point is collected.
 
-To record pose in tum format, you can use https://github.com/RuanJY/evaluater
+To record pose in the tum format, you can use https://github.com/RuanJY/evaluater
 
 ## Localization accuracy:
 
-The reference bus routes path and the sensor data used in SLAM are collected in different and coordinate frames.
-We align the two paths first and then compute a metric called Relative Root mean Square Error (RRMSE).
+The reference bus routes path and the sensor data used in SLAM are collected in different coordinate frames.
+We align the two paths first and then compute a metric called Relative Root Mean Square Error (RRMSE).
 
 - The Dyna-vehicle group shows the lowest errors.
-- The MK1-3 sequences presents significant challenges.
+- The MK1-3 sequences present significant challenges.
 - The Tunnel group exhibits the highest error.
 
 <p align="center">
@@ -153,33 +155,10 @@ SLAM performance is classified as
   <img src="document/figure/result_floam_fastlio.png" alt="result_floam_fastlio.png" width="80%">
 </p>
 
-[//]: # (### evo)
+# Download
 
-[//]: # (https://github.com/MichaelGrupp/evo)
+All **data** are avaliable at ([Data_download from Onedrive](https://1drv.ms/f/c/7de4f2ce1de30586/EoYF4x3O8uQggH1g1gAAAAABHtm7xdSWAF3Q12S6Wyertg?e=MB0NVu), password: HK_MEMS_Dataset)  
 
-[//]: # (### rpg)
-
-[//]: # (https://github.com/uzh-rpg/rpg_trajectory_evaluation)
-
-[//]: # (### traj_plot from FusionPortale)
-
-[//]: # (https://github.com/fusionportable/fusionportable_dataset_tools/tree/main/tools/traj_plot)
-
-[//]: # (### self-defined method based on bus routes)
-
-[//]: # (need to be developed)
-
-[//]: # ()
-[//]: # (## Mapping evaluation: )
-
-[//]: # (### map quality from fusionportable_dataset_tools &#40;RMSE of RE, COM, CD, with ground truth&#41;)
-
-[//]: # (https://github.com/fusionportable/fusionportable_dataset_tools/tree/main/evaluation/map_evaluation)
-
-[//]: # ()
-[//]: # (### map entropy from Pointcloud Evaluation Tool &#40;without ground truth&#41;)
-
-[//]: # (https://github.com/AIS-Bonn/pointcloud_evaluation_tool)
 
 # Acknowledgement
 
