@@ -2,8 +2,9 @@
 HK-MEMS, a MEMS LiDAR dataset on urban tunnels and dynamic scenarios
 
 # Updates
+- 27 Sep 2025, **modified SLAM methods** that can directly run this dataset are open-sourced: [M1_floam](https://github.com/RuanJY/M1_floam), [SLAMesh](https://github.com/RuanJY/SLAMesh), [robosense_fast_lio](https://github.com/RuanJY/robosense_fast_lio)
 
-- 12 May 2025, all **data** are avaliable at ([Data_download](https://1drv.ms/f/c/7de4f2ce1de30586/EoYF4x3O8uQggH1g1gAAAAABK8Z5VXKvO4bxk7nF1L0AZw?e=fHs7N8), password: HK_MEMS_Dataset)  
+- 12 May 2025, all **data**, including ros bag, scripts for batch processing, tools for reading SLAM trajectories, MATLAB code for generating ground truth, and MATLAB code for plotting evaluation figures are avaliable at ([Data_download](https://1drv.ms/f/c/7de4f2ce1de30586/EoYF4x3O8uQggH1g1gAAAAABK8Z5VXKvO4bxk7nF1L0AZw?e=fHs7N8), password: HK_MEMS_Dataset)  
 
 - 06 Mar 2025, Introduction **video** are available at： [youtube](https://youtu.be/skkPn5g-ow4) or [bilibili](https://www.bilibili.com/video/BV1fUX9YWEZW/?vd_source=a7075e8cce0b5d3273610c2b2539377d)
 
@@ -122,9 +123,9 @@ Altitude references are established through smoothed air pressure readings from 
 
 ## Evaluated SLAM
 We adapted and tested several SLAM methods to the MEMS LiDAR in this dataset, including:
-- F-LOAM: LO, point-based, need to modify the feature extraction 
-- SLAMesh: LO, model-based, no modification needed.
-- FAST-LIO2: LIO system, filter-based, no feature extraction needed.
+- F-LOAM: LO, point-based, need to modify the feature extraction. Modified version: [M1_floam](https://github.com/RuanJY/M1_floam)
+- SLAMesh: LO, model-based, no modification needed. Code: [SLAMesh](https://github.com/RuanJY/SLAMesh)
+- FAST-LIO2: LIO system, filter-based, no feature extraction needed. Modified version: [robosense_fast_lio](https://github.com/RuanJY/robosense_fast_lio)
 - LIO-SAM: LIO system, factor-graph-based, needs to modify the feature extraction.
   
 In LIO systems, notice that the timestamp of each frame of the point cloud in M1 LiDAR is the time when the last point is collected.
