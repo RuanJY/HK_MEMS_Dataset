@@ -73,6 +73,10 @@ Main features and challenges of 26 sequences and three groups:
   <img src="document/figure/group_description.png" alt="group_description.png" width="100%">
 </p>
 
+<p align="center">
+<img width="60%" alt="challeng_of_scenarios" src="https://github.com/user-attachments/assets/c571af4c-bd99-4bc6-97e9-57549b089361" />
+</p>
+
 ## Dyna-pedestrian group
 6 sequences in densely populated residential zones;
 - HH1: mapping the HK Coliseum with minimal dynamic objects, handheld, easy;
